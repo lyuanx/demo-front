@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* 去除 li前面的 点 */
+    list-style: none;
+}
+
+a {
+    /* 去除a原本的样式 */
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 板心居中 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+.top {
+    height: 42px;
+    /* 这里的margin会层叠板心中的margin属性 */
+    margin: 30px auto;
+}
+
+.top .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+    /* li之间增加外间距 */
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    /* a是行内元素(没有宽度高度)，需要转成块 */
+    display: block;
+    height: 42px;
+    /* 文字左右两边加10px的宽度 */
+    padding: 0 10px;
+    /* 让文字垂直居中 */
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav ul li a:hover {
+    /* 鼠标经过时，给a增加样式 */
+    border-bottom: 2px solid #00a4ff;
+    /* 文字颜色也改成相同颜色 */
+    color: #00a4ff;
+}
+
+.search {
+    float: left;
+    /* 
+        经过现在实践，border加了几像素，好像不会增加宽度(input宽度+button宽度+应该还要加border边框)
+        按教程上是要算border 加的边框像素.
+        疑难问题!!!!!!!!
+     */
+    width: 395px;
+    height: 42px;
+    /* 搜索框向左边空出一定距离 */
+    margin-left: 70px;
+}
+
+.search input {
+    float: left;
+    width: 345px;
+    height: 42px;
+    /* 这里框框实际高度：height + border中的2*1px */
+    border: 1px solid lightblue;
+    /* 去除右边的边框，右边按钮会贴着 */
+    border-right: 0;
+    /* 输入框文字 */
+    color: #bfbfbf;
+    font-size: 14px;
+    /* 文字不贴左边。这个会撑大原来的宽度，需要width减一下 */
+    padding-left: 15px;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    /* button默认有个边框，需要手工去除 */
+    border: 0;
+    background: url(../img/btn.png);
+}
+
+.user {
+    float: right;
+    line-height: 42px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.user img {
+    /* 文字与图片对齐 */
+    vertical-align: middle
+}
+
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner .wrapper {
+    height: 421px;
+    background: url(../img/banner2.png) no-repeat top center;
+}
+
+.left {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.left ul li {
+    height: 45px;
+    line-height: 45px;
+    margin: 0 20px;
+}
+
+.left ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.left ul li a:hover {
+    color: #00a4ff;
+}
+
+.left ul li a span {
+    float: right;
+}
+
+.right {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: white;
+    /* 浮动的盒子不会有外边距合并问题 */
+    margin-top: 50px;
+}
+
+.right h2 {
+    height: 48px;
+    background-color: #9bceea;
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 48px;
+    /* 字体大小 */
+    font-size: 18px;
+    color: #fff;
+}
+
+.bd {
+    padding: 0 20px;
+}
+
+.bd ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.bd a {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    /* 700粗体 400正常 */
+    font-weight: 700;
+}
+
+.goods {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    /* 盒子阴影 */
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.2);
+    /* 行高继承给子模块 */
+    line-height: 60px;
+}
+
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    font-size: 16px;
+    color: #050505;
+    padding: 0 30px;
+    border-left: 1px solid #ccc;
+}
+
+.goods>a {
+    float: right;
+    margin-right: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+
+.box {
+    margin-top: 30px;
+}
+
+.box-h {
+    height: 45px;
+}
+
+.box-h h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.box-h a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+
+.box-b ul {
+    /* 由于li数量多了，会被挤到下一行。那我们的父容器足够大就不会把li挤下去 */
+    width: 1225px;
+}
+
+.box-b ul li {
+    position: relative;
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    /* 每个li之间有一个小缝隙 */
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.box-b ul li>img {
+    /* 图片会比容器大，直接让图片按容器大小缩小 */
+    width: 100%;
+}
+
+.box-b ul li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.box-b ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.box-b .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box-b .info span {
+    color: #ff7c2d;
+}
+
+.footer {
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .wrapper {
+    /* 外边距合并有问题，无法下移35px */
+    /* margin-top: 35px; */
+    /* 要使用 padding-top */
+    padding-top: 35px;
+}
+
+.copyright {
+    float: left;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    line-height: 33px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.links {
+    float: right;
+}
+
+.links dl {
+    float: right;
+    margin-left: 100px;
+}
+
+.links dl dt {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.links dl dd a {
+    font-size: 12px;
+    color: #333;
+}

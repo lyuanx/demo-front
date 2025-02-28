@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "36001192",
+      "name": "盾牌",
+      "font_class": "dunpai",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "36001193",
+      "name": "棍",
+      "font_class": "jinggun",
+      "unicode": "e6f1",
+      "unicode_decimal": 59121
+    },
+    {
+      "icon_id": "36001194",
+      "name": "警察证",
+      "font_class": "jingchazheng",
+      "unicode": "e6f2",
+      "unicode_decimal": 59122
+    },
+    {
+      "icon_id": "36001195",
+      "name": "警车",
+      "font_class": "jingche",
+      "unicode": "e6f3",
+      "unicode_decimal": 59123
+    },
+    {
+      "icon_id": "36001212",
+      "name": "登记",
+      "font_class": "dengji",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "36001213",
+      "name": "文件箱",
+      "font_class": "wenjianxiang",
+      "unicode": "e6f5",
+      "unicode_decimal": 59125
+    },
+    {
+      "icon_id": "38263602",
+      "name": "雪人",
+      "font_class": "xueren",
+      "unicode": "e8d6",
+      "unicode_decimal": 59606
+    }
+  ]
+}

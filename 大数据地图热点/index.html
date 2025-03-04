@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            position: relative;
+            width: 840px;
+            height: 840px;
+            background: url(images/map_china.png) no-repeat;
+            margin: auto;
+        }
+
+        .city {
+            position: absolute;
+            top: 367px;
+            right: 263px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        div[class^=pulse] {
+            /* div的盒子大小 */
+            width: 8px;
+            height: 8px;
+            /* div的位置 。保证pulse盒子在city父盒子中 水平居中 垂直居中*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 增加盒子阴影 */
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            /* 设置动画名 */
+            animation: pulse 1.2s linear infinite;
+
+        }
+
+        div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes pulse {
+            0% {}
+
+            70% {
+                width: 40px;
+                height: 40px;
+                /* 透明度 */
+                opacity: 1;
+            }
+
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dot"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

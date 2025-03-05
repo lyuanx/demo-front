@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 400px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            /* 增加动画效果 */
+            transition: all .4s;
+            /* 保持盒子是3d效果 */
+            transform-style: preserve-3d;
+        }
+
+        div:first-child:hover {
+            transition-delay: .1s;
+            /* 鼠标放上去，让盒子翻转 */
+            transform: rotateY(180deg);
+            z-index: 0;
+        }
+
+        div:last-child:hover {
+            transition-delay: .1s;
+            /* 鼠标放上去，让盒子翻转 */
+            transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            font-size: 32px;
+            color: white;
+        }
+
+        .front {
+            background-color: pink;
+            z-index: 1;
+        }
+
+        .back {
+            background-color: purple;
+            /* 沿着y轴翻转180度，让back盒子成为front的背面 */
+            transform: rotateY(180deg);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">前面</div>
+        <div class="back">后面</div>
+    </div>
+</body>
+
+</html>
